@@ -4,7 +4,10 @@ const notifier = require("node-notifier");
 const app = express();
 
 app.get("/", (req, res, next) => {
-  notifier.notify("Hello!");
+  notifier.notify({
+    title: "Greetings",
+    message: "Hello!",
+  });
   res.send({ message: "Notification sent" });
 });
 
