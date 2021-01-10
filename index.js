@@ -9,6 +9,8 @@ app.get("/", (req, res, next) => {
     title: "Greetings",
     message: "Hello!",
     icon: path.join(__dirname, "/images/icon.jpg"),
+    sound: true,
+    wait: true,
   });
   res.send({ message: "Notification sent" });
 });
